@@ -4,7 +4,7 @@ import { fetchUsers, isError, isLoading } from "./action_creator";
 export const fetchHttp = async (url = "", method = "get", body = {}) =>
   await axios({
     method,
-    url: `http://localhost:3010/api${url}`,
+    url: `https://user-server-test.herokuapp.com/api${url}`,
     data: body,
   })
     .then((res) => res.data)
